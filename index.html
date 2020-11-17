@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="epub电子书下载,mobi电子书下载,pdf电子书下载,txt电子书下载,kindle电子书下载">
+<meta name="description" content="yubook.top个人学习电子书下载，提供最新epub电子书,mobi电子书,pdf电子书,txt电子书,kindle电子书图书免费下载，供个人学习使用。">
+<title>yubook.top - 个人学习电子书下载,epub电子书下载,mobi电子书下载,txt电子书下载,pdf电子书下载,kindle电子书下载</title>
+
+<style type="text/css"> 
+
+
+/*defaults*/
+*,h1,figure{font-size:100%;font-family:inherit;font-weight:inherit;font-style:inherit;line-height:inherit;vertical-align:baseline;border:0;padding:0;margin:0}*,*::before,*::after,input[type='search']{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html{-ms-overflow-style:-ms-autohiding-scrollbar}html{-ms-touch-action:manipulation;touch-action:manipulation}svg{fill:currentColor;vertical-align:middle;pointer-events:none}ul,ol{list-style:none}em{font-style:italic}b{font-weight:inherit}i{font-style:inherit}ins{text-decoration:none}input,textarea,select{border-radius:0;border:none;outline:none}select:-moz-focusring{text-shadow:0 0 0#000;color:transparent}input[type='text'],input[type='email'],input[type='number'],input[type='search'],input[type='tel'],input[type='url'],textarea,select{-webkit-appearance:none;-moz-appearance:textfield}input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}input::-ms-reveal{display:none}input::-ms-clear{display:none}button,input[type='submit']{border:none;background-color:transparent}
+/*normalize*/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0 0 0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid#c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*Yubook*/
+
+body,
+.ad,
+.sm
+{
+	font-family: Lucida Grande, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+}
+
+a
+{
+	color: currentColor;
+	text-decoration: none;
+}
+
+.clearfix::after
+{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.footer {
+	background: #313131;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 0.7em;
+    margin: 1em 0 0 0;
+    line-height: 24px;
+    color: #aaa;
+
+}
+
+/*
+	AD
+*/
+
+.ad
+{
+	width: 9.375rem; /* 150 */
+	color: #444;
+	color: rgba( 0, 0, 0, .75 );
+	background-color: #fff;
+	background-color: rgba( 255, 255, 255, .5 );
+	position: fixed;
+	z-index: 1000;
+	top: 0.625rem; /* 10 */
+	left: 0.625rem; /* 10 */
+	padding: 0.5rem 0.625rem; /* 8 10 */
+}
+.ad--dark
+{
+	color: #ddd;
+	color: rgba( 255, 255, 255, .75 );
+	background-color: #111;
+	background-color: rgba( 0, 0, 0, .5 );
+}
+	.ad__close
+	{
+		width: 0.625rem; /* 10 */
+		height: 0.625rem; /* 10 */
+		background-color: #777;
+		background-color: rgba( 0, 0, 0, .5 );
+		border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+		top: -0.25rem; /* 4 */
+		right: -0.25rem; /* 4 */
+
+		-webkit-transition: -webkit-transform .25s ease-in-out;
+		transition: transform .25s ease-in-out;
+	}
+	.ad--dark .ad__close
+	{
+		background-color: #ddd;
+		background-color: rgba( 255, 255, 255, .75 );
+
+	}
+	.ad__close:hover,
+	.ad__close:focus
+	{
+		-webkit-transform: scale( 1.25 );
+		-ms-transform: scale( 1.25 );
+		transform: scale( 1.25 );
+	}
+
+	#carbonads
+	{
+		font-size: 0.875rem; /* 14 */
+		letter-spacing: -0.071em; /* 1 (14) */
+		line-height: 1.125rem; /* 18 */
+	}
+		#carbonads a
+		{
+			color: currentColor;
+			display: block;
+			margin-top: 0.313rem; /* 5 */
+		}
+		#carbonads .carbon-poweredby
+		{
+			font-size: 0.75rem; /* 12 */
+			text-transform: uppercase;
+			color: #aaa;
+			color: rgba( 0, 0, 0, .25 );
+		}
+		.ad--dark #carbonads .carbon-poweredby
+		{
+			color: #999;
+			color: rgba( 255, 255, 255, .25 );
+		}
+
+
+
+/*
+	SOCIAL MEDIA
+*/
+
+.sm
+{
+	width: 100%;
+	height: 2.5rem; /* 40 */
+	color: #444;
+	color: rgba( 0, 0, 0, .75 );
+	background-color: #fff;
+	background-color: rgba( 255, 255, 255, .5 );
+	overflow: hidden;
+	position: fixed;
+	z-index: 1001;
+	bottom: 0;
+	left: 0;
+	padding: 0.625rem 1.25rem 0; /* 10 20 */
+}
+	.sm--dark
+	{
+		color: #ddd;
+		color: rgba( 255, 255, 255, .75 );
+		background-color: #111;
+		background-color: rgba( 0, 0, 0, .5 );
+	}
+	.sm ul
+	{
+	}
+		.sm li
+		{
+			float: right;
+			margin-left: 1rem;
+		}
+		.sm li:first-child
+		{
+			float: left;
+			margin-left: 0;
+		}
+			.sm .googleplus-one
+			{
+				max-width: 60px;
+			}
+			.sm .twitter-follow > *:not( :first-child ),
+			.sm .twitter-share > *:not( :first-child )
+			{
+				display: none;
+			}
+
+		@media screen{ @media ( min-width: 0px ) /* everything but Internet Explorer and Safari ≤6 */
+		{
+			.sm li:last-child
+			{
+				opacity: 0;
+				-webkit-transition: opacity .25s ease-in-out;
+				transition: opacity .25s ease-in-out;
+			}
+			.sm:hover li:last-child
+			{
+				opacity: 1;
+			}	
+		}}
+
+			.sm__back
+			{
+				font-size: 0.875rem; /* 14 */
+				font-weight: bold;
+				color: currentColor;
+				text-transform: uppercase;
+				position: relative;
+			}
+				.sm__back::before
+				{
+					width: 0;
+					height: 0;
+					border: 0.313rem solid transparent; /* 5 */
+					border-left: none;
+					border-right-color: currentColor;
+					content: '';
+					display: inline-block;
+					position: relative;
+					left: 0;
+					margin-right: 0.313rem; /* 5 */
+
+					-webkit-transition: left .25s ease-in-out;
+					transition: left .25s ease-in-out;
+				}
+				.sm__back:hover::before,
+				.sm__back:focus::before
+				{
+					left: -0.313rem; /* 5 */
+				}
+
+
+
+/*
+	RESPONSIVENESS
+*/
+
+@media screen and (max-width: 40em), screen and (max-height: 40em) /* 640 */
+{
+	.ad,
+	.sm
+	{
+		display: none;
+	}
+}
+	body
+	{
+		font-family: Roboto, sans-serif;
+		color: #34434b;
+		background-color: #f4fbfc;
+		font-size: 14px;
+		/*padding: 1.25rem 1.25rem 0 1.25rem; /* 80 20 */
+	}
+
+	.container
+	{
+		width: 100%;
+		max-width: 960px; /* 640 */
+		margin: 0 auto;
+		padding: 1.25rem 1.25rem 0 1.25rem; 
+	}
+
+	.container h1
+	{
+		/*font-size: 42px;*/
+		font-weight: 300;
+		/*color: #5594b3;*/
+		color: #05A2DA;
+		margin-bottom: 14px;
+		text-align: center;
+	}
+		.container h1 a:hover,
+		.container h1 a:focus,
+		{
+			color: #a664b7;
+		}
+
+	.container span
+	{
+		line-height: 1.6;
+	}
+	.notice > p{
+		margin-left: 1rem;
+		/*display: none;*/
+	}
+	.faq input
+	{
+		width: 99%;
+		height: 50px;
+		font-size: 16px;
+		background-color: #fff;
+		box-shadow: 0px 2px 4px rgba( 52, 67, 75, .2 );
+		display: block;
+		padding-left: 1%;
+		margin: 10px 0 10px 0;
+
+		-webkit-transition: box-shadow .1s linear;
+		transition: box-shadow .1s linear;
+	}
+	.faq input::-webkit-input-placeholder	{ color: #a1bdcb !important; }
+	.faq input::-moz-placeholder			{ color: #a1bdcb !important; }
+	.faq input:-ms-input-placeholder		{ color: #a1bdcb !important; }
+	.faq input:focus
+	{
+		box-shadow: 0px 4px 8px rgba( 52, 67, 75, .4 );
+	}
+	.faq .highlight
+	{
+		background-color: #fffd77;
+	}
+		.faq > ul > li >i:before{
+			content:"复制编号";
+		}
+		.faq > ul > li > i{
+			/*color: #a664b7;*/
+			color: #05A2DA;
+			cursor: pointer;
+		}
+		.faq > ul > li
+		{
+			border-bottom: 1px solid #dcebed;
+			/*margin-top: 10px;*/
+			padding: 10px 0;
+		}
+		.faq > ul > li.is-hidden
+		{
+			display: none;
+		}
+		.faq > ul > li.searchpages
+		{
+			display: block !important;
+		}
+		.faq__notfound
+		{
+			font-size: 20px;
+			font-style: italic;
+			display: none;
+		}
+		.faq__notfound.is-visible
+		{
+			display: block;
+		}
+#gotop{
+	display: block;
+	position: fixed;
+	width: 38px;
+	height: 38px;	
+	bottom: 70px;
+	right: 20px;
+	border-radius: 30%;
+	text-decoration: none;
+	display: none;
+	background-color: #333;
+	border: 1px solid #999;
+}
+#gotop span{
+	display: block;
+	width: 36px;
+	color: #cccccc;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10%;
+}
+#gotop span:hover{
+	color: #dddddd;
+}
+.find{
+	 color: #05A2DA;
+}
+</style>
+</head>
+<body>
+<div class="container" role="main">
+<div class="notice">
+	<h1>yubook.top</h1>
+	<p style="text-align: right;margin-right: 1rem">更新时间：2020-11-15</p>
+	<p>1、点击复制编号</p>
+	<p>2、微信公众号[<span style="color: #05A2DA;font-weight:bold;">读本闲书</span>]粘贴输入编号</p>
+	<p>3、搜索尽量简短</p>
+</div>
+	<div class="faq">
+		<input type="search" value="" placeholder="请输入书名或作者" />
+		<ul>
+<li><i data-clipboard-text="T110"></i> <span>（T110）心是孤独的猎手，[美]卡森▪麦卡勒斯</span></li>
+<li><i data-clipboard-text="T109"></i> <span>（T109）爱情和其他魔鬼，[哥伦比亚]加西亚▪马尔克斯</span></li>
+<li><i data-clipboard-text="T108"></i> <span>（T108）荒漠甘泉，[美]考门夫人</span></li>
+<li><i data-clipboard-text="T107"></i> <span>（T107）原生家庭：如何修补自己的性格缺陷，苏珊·福沃德博士&克雷格·巴克</span></li>
+<li><i data-clipboard-text="T106"></i> <span>（T106）平凡的世界（套装共3册），路遥</span></li>
+<li><i data-clipboard-text="T105"></i> <span>（T105）月亮与六便士，[英]威廉▪萨默塞特▪毛姆</span></li>
+<li><i data-clipboard-text="T104"></i> <span>（T104）我脑袋里的怪东西，[土]奥尔罕▪帕慕克</span></li>
+<li><i data-clipboard-text="T103"></i> <span>（T103）霍乱时期的爱情，[哥伦比亚]加西亚▪马尔克斯</span></li>
+<li><i data-clipboard-text="T102"></i> <span>（T102）上帝掷骰子吗：量子物理史话，曹天元</span></li>
+<li><i data-clipboard-text="T101"></i> <span>（T101）追风筝的人+群山回唱+灿烂千阳(套装共3册)，卡勒德▪胡赛尼</span></li>
+<li><i data-clipboard-text="T100"></i> <span>（T100）曼昆经济学原理（第3版），N.格里高利·曼昆</span></li>
+<li><i data-clipboard-text="T99"></i> <span>（T99）刺杀骑士团长，[日]村上春树</span></li>
+<li><i data-clipboard-text="T98"></i> <span>（T98）恶意，东野圭吾</span></li>
+<li><i data-clipboard-text="T97"></i> <span>（T97）规训与惩罚，[法]米歇尔·福柯</span></li>
+<li><i data-clipboard-text="T96"></i> <span>（T96）社会心理学，戴维·迈尔斯</span></li>
+<li><i data-clipboard-text="T95"></i> <span>（T95）十九年间谋杀小叙，那多</span></li>
+<li><i data-clipboard-text="T94"></i> <span>（T94）白先勇小说全集(套装共5册)孽子+纽约客+台北人+树犹如此+寂寞的十七岁，白先勇</span></li>
+<li><i data-clipboard-text="T93"></i> <span>（T93）疯癫与文明，[法]米歇尔·福柯</span></li>
+<li><i data-clipboard-text="T92"></i> <span>（T92）奇特的工具：艺术与人性，阿尔瓦·诺伊</span></li>
+<li><i data-clipboard-text="T91"></i> <span>（T91）向前一步：女性，工作及领导意志，[美]谢丽尔•桑德伯格</span></li>
+<li><i data-clipboard-text="T90"></i> <span>（T90）海底两万里，[法]儒勒·凡尔纳</span></li>
+<li><i data-clipboard-text="T89"></i> <span>（T89）口才三绝，盛安之</span></li>
+<li><i data-clipboard-text="T88"></i> <span>（T88）草叶集，[美]沃尔特·惠特曼</span></li>
+<li><i data-clipboard-text="T87"></i> <span>（T87）雾都孤儿，狄更斯</span></li>
+<li><i data-clipboard-text="T86"></i> <span>（T86）我的拖延症女友，阿牧（Priest）</span></li>
+<li><i data-clipboard-text="T85"></i> <span>（T85）女生徒，[日]太宰治</span></li>
+<li><i data-clipboard-text="T84"></i> <span>（T84）球状闪电，刘慈欣</span></li>
+<li><i data-clipboard-text="T83"></i> <span>（T83）白鹿原，陈忠实</span></li>
+<li><i data-clipboard-text="T82"></i> <span>（T82）面纱，[英]毛姆</span></li>
+<li><i data-clipboard-text="T81"></i> <span>（T81）西方正典，[美]哈罗德·布鲁姆</span></li>
+<li><i data-clipboard-text="T80"></i> <span>（T80）PDF-做出好决定：理性掌控工作与生活，斯蒂芬·P·罗宾斯</span></li>
+<li><i data-clipboard-text="T79"></i> <span>（T79）橘子不是唯一的水果，[英]珍妮特·温特森</span></li>
+<li><i data-clipboard-text="T78"></i> <span>（T78）巴黎圣母院，[法]雨果</span></li>
+<li><i data-clipboard-text="T77"></i> <span>（T77）我是个妈妈，我需要铂金包，[美]薇妮斯蒂·马丁</span></li>
+<li><i data-clipboard-text="T76"></i> <span>（T76）少有人走的路（套装共4册）少有人走的路1：心智成熟的旅程+少有人走的路2：勇敢地面对谎言+少有人走的路3：与心灵对话+少有人走的路4：在焦虑的年代获得精神的成长，[美]M.斯科特.派克</span></li>
+<li><i data-clipboard-text="T75"></i> <span>（T75）被讨厌的勇气：“自我启发之父”阿德勒的哲学课，[日]岸见一郎</span></li>
+<li><i data-clipboard-text="T74"></i> <span>（T74）我不喜欢这世界，我只喜欢你，乔一</span></li>
+<li><i data-clipboard-text="T73"></i> <span>（T73）浮生物语（1-3单本分册），裟椤双树</span></li>
+<li><i data-clipboard-text="T72"></i> <span>（T72）百年孤独，[哥伦比亚]加西亚▪马尔克斯</span></li>
+<li><i data-clipboard-text="T71"></i> <span>（T71）宽客人生：从物理学家到数量金融大师的传奇，[美]伊曼纽尔·德曼</span></li>
+<li><i data-clipboard-text="T70"></i> <span>（T70）簪中录(全四册)，侧侧轻寒</span></li>
+<li><i data-clipboard-text="T69"></i> <span>（T69）自控力，[美]凯利▪麦格尼格尔</span></li>
+<li><i data-clipboard-text="T68"></i> <span>（T68）沉默的大多数，王小波</span></li>
+<li><i data-clipboard-text="T67"></i> <span>（T67）推理之王1：无证之罪，紫金陈</span></li>
+<li><i data-clipboard-text="T66"></i> <span>（T66）推理之王2：坏小孩，紫金陈</span></li>
+<li><i data-clipboard-text="T65"></i> <span>（T65）鲁迅全集（共20册），鲁迅</span></li>
+<li><i data-clipboard-text="T64"></i> <span>（T64）最蓝的眼睛，托妮·莫里森</span></li>
+<li><i data-clipboard-text="T63"></i> <span>（T63）怦然心动，[美]文德琳▪范▪德拉安南</span></li>
+<li><i data-clipboard-text="T62"></i> <span>（T62）新编说文解字大全集(超值白金版)，《新编说文解字大全集》编委会	</span></li>
+<li><i data-clipboard-text="T61"></i> <span>（T61）pdf-电车难题，托马斯·卡思卡特</span></li>
+<li><i data-clipboard-text="T60"></i> <span>（T60）倾城之恋，张爱玲</span></li>
+<li><i data-clipboard-text="T59"></i> <span>（T59）秦汉史，吕思勉</span></li>
+<li><i data-clipboard-text="T58"></i> <span>（T58）小岛经济学：鱼、美元和经济的故事，彼得▪D.希夫，安德鲁▪J.希夫</span></li>
+<li><i data-clipboard-text="T57"></i> <span>（T57）边城，沈从文</span></li>
+<li><i data-clipboard-text="T56"></i> <span>（T56）一个人的朝圣（全2册）1+2：奎妮的情歌，英]蕾秋▪乔伊斯	</span></li>
+<li><i data-clipboard-text="T55"></i> <span>（T55）我的前半生，爱新觉罗▪溥仪</span></li>
+<li><i data-clipboard-text="T54"></i> <span>（T54）卡耐基成功学：做最好的自己（全4册）卡耐基写给女人的幸福箴言+卡耐基成功学：语言的突破+卡耐基成功学：人性的弱点+卡耐基成功学：人性的优点，戴尔▪卡耐基</span></li>
+<li><i data-clipboard-text="T53"></i> <span>（T53）沟通的艺术，[美]罗纳德▪阿德勒，拉塞尔▪普罗克特</span></li>
+<li><i data-clipboard-text="T52"></i> <span>（T52）影响力，[美]罗伯特▪西奥迪尼</span></li>
+<li><i data-clipboard-text="T51"></i> <span>（T51）穷查理宝典：查理▪芒格智慧箴言录，查理▪芒格	</span></li>
+<li><i data-clipboard-text="T50"></i> <span>（T50）思考，快与慢，[美]丹尼尔▪卡尼曼	</span></li>
+<li><i data-clipboard-text="T49"></i> <span>（T49）高效能人士的七个习惯，[美]史蒂芬▪柯维</span></li>
+<li><i data-clipboard-text="T48"></i> <span>（T48）曾国藩传，张宏杰</span></li>
+<li><i data-clipboard-text="T47"></i> <span>（T47）周浩晖推理悬疑经典集（共10册）暗黑者+暗黑者2：宿命+暗黑者3：离别曲+暗黑者外传：惩罚+邪恶催眠师1+邪恶催眠师2+邪恶催眠师3：梦醒大结局+凶画+鬼望坡+摄魂谷，周浩晖</span></li>
+<li><i data-clipboard-text="T46"></i> <span>（T46）天才在左疯子在右，高铭</span></li>
+<li><i data-clipboard-text="T45"></i> <span>（T45）名利场（套装上下册），[英]萨克雷</span></li>
+<li><i data-clipboard-text="T44"></i> <span>（T44）大秦帝国，孙皓晖</span></li>
+<li><i data-clipboard-text="T43"></i> <span>（T43）盗墓笔记，南派三叔</span></li>
+<li><i data-clipboard-text="T42"></i> <span>（T42）1Q84（套装共3册），[日]村上春树</span></li>
+<li><i data-clipboard-text="T41"></i> <span>（T41）非暴力沟通，马歇尔▪卢森堡</span></li>
+<li><i data-clipboard-text="T40"></i> <span>（T40）自卑与超越，[奥]阿弗雷德▪阿德勒</span></li>
+<li><i data-clipboard-text="T39"></i> <span>（T39）西窗法雨，刘星</span></li>
+<li><i data-clipboard-text="T38"></i> <span>（T38）上流法则，[美]埃默▪托尔斯</span></li>
+<li><i data-clipboard-text="T37"></i> <span>（T37）洛克菲勒留给儿子的38封信，洛克菲勒	</span></li>
+<li><i data-clipboard-text="T36"></i> <span>（T36）余华经典小说4册（活着+兄弟+许三观卖血记+在细雨中呼喊），余华</span></li>
+<li><i data-clipboard-text="T35"></i> <span>（T35）我们爱过又忘记，余秀华</span></li>
+<li><i data-clipboard-text="T34"></i> <span>（T34）那不勒斯四部曲（套装共4册）我的天才女友+新名字的故事+离开的，留下的+失踪的孩子，[意]埃莱娜▪费兰特</span></li>
+<li><i data-clipboard-text="T33"></i> <span>（T33）那个不为人知的故事，Twentine </span></li>
+<li><i data-clipboard-text="T32"></i> <span>（T32）有限与无限的游戏：一个哲学家眼中的竞技世界，[美]詹姆斯·卡斯</span></li>
+<li><i data-clipboard-text="T31"></i> <span>（T31）浮生六记，[清]沈复</span></li>
+<li><i data-clipboard-text="T30"></i> <span>（T30）长夜难明，紫金陈</span></li>
+<li><i data-clipboard-text="T29"></i> <span>（T29）悉达多，[德]赫尔曼▪黑塞</span></li>
+<li><i data-clipboard-text="T28"></i> <span>（T28）莫斯科绅士，[美]埃默▪托尔斯</span></li>
+<li><i data-clipboard-text="T27"></i> <span>（T27）富兰克林自传，[美]本杰明▪富兰克林</span></li>
+<li><i data-clipboard-text="T26"></i> <span>（T26）你当像鸟飞往你的山，塔拉.韦斯特弗</span></li>
+<li><i data-clipboard-text="T25"></i> <span>（T25）假面饭店，[日]东野圭吾</span></li>
+<li><i data-clipboard-text="T24"></i> <span>（T24）杀死一只知更鸟，[美]哈珀▪李</span></li>
+<li><i data-clipboard-text="T23"></i> <span>（T23）卡拉马佐夫兄弟（套装上下册），[俄]费奥多尔▪陀思妥耶夫斯基</span></li>
+<li><i data-clipboard-text="T22"></i> <span>（T22）贫穷的本质，班纳吉,迪弗洛</span></li>
+<li><i data-clipboard-text="T21"></i> <span>（T21）批判性思维工具，[美]理查德▪保罗，琳达▪埃尔德</span></li>
+<li><i data-clipboard-text="T20"></i> <span>（T20）批判性思维：带你走出思维的误区，[美]布鲁克▪诺埃尔▪摩尔，[美]理查德▪帕克	</span></li>
+<li><i data-clipboard-text="T19"></i> <span>（T19）想象的共同体，本尼迪克特▪安德森</span></li>
+<li><i data-clipboard-text="T18"></i> <span>（T18）逻辑哲学论，[奥]维特根斯坦</span></li>
+<li><i data-clipboard-text="T17"></i> <span>（T17）撒野，木小瓷</span></li>
+<li><i data-clipboard-text="T16"></i> <span>（T16）深度学习，[美]伊恩▪古德费洛</span></li>
+<li><i data-clipboard-text="T15"></i> <span>（T15）思辨与立场：生活中无处不在的批判性思维工具，[美]理查德·保罗	</span></li>
+<li><i data-clipboard-text="T14"></i> <span>（T14）十宗罪（前传+5部全），蜘蛛</span></li>
+<li><i data-clipboard-text="T13"></i> <span>（T13）傲慢与偏见，简▪奥斯丁</span></li>
+<li><i data-clipboard-text="T12"></i> <span>（T12）人间值得，[日]中村恒子</span></li>
+<li><i data-clipboard-text="T11"></i> <span>（T11）熔炉，[韩]孔枝泳</span></li>
+<li><i data-clipboard-text="T10"></i> <span>（T10）金瓶梅（崇祯本），兰陵笑笑生</span></li>
+<li><i data-clipboard-text="T9"></i> <span>（T9）哈利波特完整系列，[英]J.K.罗琳</span></li>
+<li><i data-clipboard-text="T8"></i> <span>（T8）东野圭吾作品集（共63册），东野圭吾</span></li>
+<li><i data-clipboard-text="T7"></i> <span>（T7）萧红全集(套装共5册)呼兰河传+生死场+商市街+小城三月+马伯乐+八月天，萧红</span></li>
+<li><i data-clipboard-text="T6"></i> <span>（T6）复活，[俄]列夫·托尔斯泰</span></li>
+<li><i data-clipboard-text="T5"></i> <span>（T5）献给阿尔吉侬的花束，丹尼尔▪凯斯</span></li>
+<li><i data-clipboard-text="X5"></i> <span>（X5）轻狂，巫哲</span></li>
+<li><i data-clipboard-text="X4"></i> <span>（X4）迪奥先生，绿野千鹤</span></li>
+<li><i data-clipboard-text="T4"></i> <span>（T4）82年生的金智英，赵南柱</span></li>
+<li><i data-clipboard-text="X3"></i> <span>（X3）全京城都在等我掉马，辣椒小七</span></li>
+<li><i data-clipboard-text="T3"></i> <span>（T3）云边有个小卖部，张嘉佳</span></li>
+<li><i data-clipboard-text="X2"></i> <span>（X2）花颜策，西子情</span></li>
+<li><i data-clipboard-text="T2"></i> <span>（T2）活着，余华</span></li>
+<li><i data-clipboard-text="X1"></i> <span>（X1）一级律师，木苏里</span></li>
+<li><i data-clipboard-text="T1"></i> <span>（T1）人间失格，[日]太宰治</span></li>
+		</ul>
+		<div class="faq__notfound"><p>​抱歉！您想找的书暂时没有收录！点击<a class="find" href="http://dubenxianshu.mikecrm.com/U22718w" title="免费找书登记">免费找书登记</a>提醒收录！</p></div>
+	</div>
+</div>
+	<!-- bottom -->
+<div class="footer">
+<p>yubook.top - epub电子书下载，mobi电子书下载，txt电子书下载，pdf电子书下载，kindle电子书下载</p>
+<a id="gotop" href="#">
+	<span>▲</span>
+</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<!--<script type="text/javascript" src="js/search.js"></script>-->
+<script>
+var clipboard=new ClipboardJS('.faq i');clipboard.on('success',function(e){console.log(e);alert("书籍编号复制成功！请到微信公众号【读本闲书】粘贴输入即可获得")});clipboard.on('error',function(e){console.log(e);alert("复制错误！手动复制括号里面的编号，如（T1）。请到微信公众号【读本闲书】输入即可获得")});
+</script>
+
+<!-- search.js -->
+<script>
+'use strict';(function($,window,document,undefined){var $container=$('.faq');if(!$container.length)return true;var $input=$container.find('input'),$notfound=$container.find('.faq__notfound'),$items=$container.find('> ul > li'),$item=$(),itemsIndexed=[];$items.each(function(){itemsIndexed.push($(this).text().replace(/\s{2,}/g,' ').toLowerCase())});$input.on('keyup',function(e){if(e.keyCode==13){$input.trigger('blur');return true}$items.each(function(){$item=$(this);$item.html($item.html().replace(/<span class="highlight">([^<]+)<\/span>/gi,'$1'))});var searchVal=$.trim($input.val()).toLowerCase();if(searchVal.length){for(var i in itemsIndexed){$item=$items.eq(i);if(itemsIndexed[i].indexOf(searchVal)!=-1)$item.removeClass('is-hidden').html($item.html().replace(new RegExp(searchVal+'(?!([^<]+)?>)','gi'),'<span class="highlight">$&</span>'));else $item.addClass('is-hidden')}}else $items.removeClass('is-hidden');$notfound.toggleClass('is-visible',$items.not('.is-hidden').length==0)})})(jQuery,window,document);(function($,window,document,undefined){var $container=$('.faq');if(!$container.length)return true;var $input=$container.find('input'),$items=$container.find('> ul > li'),$item=$();$input.on('keyup',function(){$item=$items.not('.is-hidden');if($item.length==1)$item.addClass('js--autoshown is-active');else $items.filter('.js--autoshown').removeClass('js--autoshown is-active')})})(jQuery,window,document);
+</script>
+<script type="text/javascript">
+	$(function(){
+	$(window).scroll(function(){ 
+		var scrollt = document.documentElement.scrollTop + document.body.scrollTop; 
+		if( scrollt >200 ){ 
+			$("#gotop").fadeIn(400);      
+		}else{      
+			$("#gotop").stop().fadeOut(400); 
+		}
+	});
+	$("#gotop").click(function(){
+			$("html,body").animate({scrollTop:"0px"},200);
+	});
+});
+</script>
+</body>
+</html>
